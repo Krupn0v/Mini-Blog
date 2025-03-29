@@ -10,4 +10,4 @@ class Comment(BaseModel):
     user_id: int
     
     class Config:
-        orm_mode = True
+        from_attribures = True

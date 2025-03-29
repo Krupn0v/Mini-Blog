@@ -8,9 +8,9 @@ load_dotenv('.env')
 login = os.getenv('login')
 password  = os.getenv('password')
 base = os.getenv('base')
-your_host = os.getenv('host')
+host = os.getenv('host')
 
-url_db = f"postgresql://{login}:{password}@{your_host}:5432/{base}"
+url_db = f"postgresql://{login}:{password}@{host}:5432/{base}"
 engine = create_engine(url_db)
 localSession = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
